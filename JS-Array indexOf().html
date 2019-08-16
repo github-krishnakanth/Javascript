@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h1>Javascript Array IndexOf() method...</h1>
+        <p id="demo"></p>
+        <script>
+            var points = [21,36,54,78,69,43,27];
+            var fruits = ["Mango", "Pineapple", "Raspberry", "Grapes", "Orange"];            
+            //document.getElementById("demo").innerHTML = "The Array element index is: "+((fruits.indexOf("Raspberry"))+1); //points.indexOf(27);
+            //document.getElementById("demo").innerHTML = "The Array element index is: "+fruits.lastIndexOf("Pineapple");
+            //var first = points.find(myFunction);
+            var firstIndex = points.findIndex(myFunction);
+            document.getElementById("demo").innerHTML = firstIndex;
+            function myFunction(value, index, array){
+                return value > 68;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Javascript Object Consturctors...</h1>
+        <p id="demo"></p>
+        <script>
+            // Constructor function for Person object
+            function Person(first, last, age, eye){
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyecolor = eye;
+                this.nationality = "English";
+                this.fullname = function() { return this.firstName + " " + this.lastName; };
+                this.changeName = function(name) { this.lastName = name; };
+            }
+            // You cannot add a new property to a constructor function 
+            Person.nationality = "German";
+            // Create two Person Objects
+            var myFather = new Person("John", "Doe", 45, "blue");
+            var myMother = new Person("Sally", "Doe", "41", "blue");
+            // Add nationality to the first object
+            myFather.nationality = "US";
+            // Add profession to the second object
+            myMother.profession = "SE";
+            myFather.name = function(){
+                return this.firstName + " " + this.lastName;
+            }
+            myFather.changeName("Boe");
+            // Display age
+            document.getElementById("demo").innerHTML = "Father's Name: " + myFather.name() + " Age: " + myFather.age + " " + 
+            myMother.age + ". Father's Nationality " + myFather.nationality + " Mother's Profession " + myMother.profession + " " + 
+            Person.nationality + " " + myMother.nationality + " " + myMother.fullname();
+        </script>
+    </body>
+</html>

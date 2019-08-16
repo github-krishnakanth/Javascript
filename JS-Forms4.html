@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h1>Javascript validations</h1>
+        <p>Enter a number and then click Submit button..</p>
+        Student Total Marks : <input type="number" id="input" min="0" max="600">
+        <button type="button" onclick="myFunction()">Submit</button>
+        <p>If the number is less than 0 and greater than 600, an error message will be displayed...</p>
+        <p id="demo"></p>
+        <script>
+            function myFunction(){
+                var inpnum = document.getElementById("input");
+                if(!inpnum.checkValidity()){
+                    document.getElementById("demo").innerHTML = inpnum.validationMessage;
+                }else{
+                    document.getElementById("demo").innerHTML = "Input is valid";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <h1>Javascript has an built-in function constructor...</h1>
+        <h1>Functions can be invoked automatically without being called...</h1>    
+        <h2>JavaScript Arrow Functions</h2>
+        <p>With arrow functions, you don't have to type the function keyword, the return keyword, and the curly brackets.</p>
+        <p>Arrow functions are not supported in IE11 or earlier.</p>
+        <p id="demo"></p>
+        <script>
+            /*var myFunction = new Function("a", "b","c", "return a*b*c");
+            document.getElementById("demo").innerHTML = myFunction(4,3,5);*/
+            /*var myFunction = function(a, b){return a*b;};
+            document.getElementById("demo").innerHTML = myFunction(4,3);*/
+            //(function() {document.getElementById("demo").innerHTML = "Hello! I called myself...";})();
+            /*function myFunction(a,b){
+                return a*b;
+            }
+            var x = myFunction(4,3) * 5;
+            document.getElementById("demo").innerHTML = x;*/
+            /*function myFunction(a,b){
+                return arguments.length;
+            }
+            document.getElementById("demo").innerHTML = myFunction; //myFunction.toString(); //myFunction(4,3);*/
+            var x = (x,y) => x*y;
+            document.getElementById("demo").innerHTML = x(4,5);
+        </script>
+    </body>
+</html>

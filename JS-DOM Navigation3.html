@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h1 id="h1">My First Page</h1>
+        <p id="p"></p>
+        <script>
+            document.getElementById("p").innerHTML = document.getElementById("h1").nodeName;
+            //document.getElementById("p").innerHTML = document.getElementById("h1").firstChild.nodeType;
+            //document.getElementById("p").innerHTML = document.lastChild.childNodes[1].nodeName;
+            //document.getElementById("p").innerHTML = document.getElementById("h1").ATTRIBUTE_NODE;
+        </script>
+    </body>
+</html>

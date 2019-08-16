@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Access a Javascript Object</h1>
+        <p id="demo"></p>
+        <script>
+            var myObj;
+            myObj = {firstName:"Smith", lastName:"Steven", age:31, country:"Australian"};
+            //myObj.age = 30;
+            myObj["age"] = 30; 
+            document.getElementById("demo").innerHTML = myObj["age"]; //myObj.age; //myObj["firstName"] + " " + myObj["lastName"]; 
+                                                        //myObj.firstName + " " + myObj.lastName;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h1>Javascript Object.defineProperty()</h1>
+        <p>This example changes a property value.</p>
+        <p id="demo"></p>
+        <script>
+            var person = {firstName: "Steven",
+                          lastName: "Smith",
+                          language: "English"};
+            Object.defineProperty(person, "language", {value: "Japanese"});
+            Object.defineProperty(person, "language", {enumerable: false});
+            Object.defineProperty(person, "country", {value: "US"});            
+            document.getElementById("demo").innerHTML = person.country; //Object.keys(person); //Object.getOwnPropertyNames(person); //person.language;
+        </script>
+    </body>
+</html>

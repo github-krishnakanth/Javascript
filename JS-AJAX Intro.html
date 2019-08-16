@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript AJAX</h1>
+        <button type="button" onclick="myFunction()">Send</button>
+        <p id="demo">Let AJAX change this text.</p>
+        <script>
+            function myFunction(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        document.getElementById("demo").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "D:\ajax_info.txt", true);
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>

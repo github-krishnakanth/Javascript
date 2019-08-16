@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Cookies</h1>
+        <input type="button" onclick="myFunction()" value="Add Cookie">
+        <p id="demo"></p>
+        <script>
+            function myFunction(){
+                var txt = "";
+                if(document.cookie = "loginid=; expires = Fri, 28 Dec 2018 12:00:00 UTC; path = /;"){
+                    txt = "Yes! Cookie is added to your browser";
+                }else{
+                    txt = "No! Cookie is not added to your browser";
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>Javascript Function Parameters...</h1>
+        <p>Sum of all arguments...</p>
+        <p id="demo"></p>
+        <script>
+            function findSum(){
+                var i = 0, sum = 0, len = arguments.length;
+                for (i; i < len; i++){
+                    sum += arguments[i];
+                }
+                return sum;
+            }
+            document.getElementById("demo").innerHTML = findSum(12,25,14,26,56,47,85,23,52,96,54,22);
+        </script>
+    </body>
+</html>

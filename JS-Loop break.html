@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h1>Javascript: A loop with break...</h1>
+        <p id="demo"></p>
+        <script>
+            var txt = "", i;
+            for(i=0; i<100; i++){
+                if(i === 15){
+                    break;
+                }
+                txt += "Number <b>"+i+"</b><br>";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        </script>
+    </body>
+</html>

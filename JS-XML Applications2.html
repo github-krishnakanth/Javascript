@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>The XMLHttpRequest Object</h1>
+        <button type="button" onclick="displayCD(0)">Display</button>
+        <p id="demo"></p>
+        <script>
+            function displayCD(i){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        xhmHandler(this, i);
+                    }
+                };
+                xhttp.open("GET", "cd_catalog.xml", true);
+                xhttp.send();
+            }
+            function xhmHandler(xhttp, i){
+                var xmlDoc = xhttp.responseXML;
+                var x = xmlDoc.getElementsByTagName("CD");
+                document.getElementById("demo").innerHTML = "Artist: " + x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                "<br> Title: " + x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + "<br> Year: " + 
+                x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+            }
+        </script>
+    </body>
+</html>

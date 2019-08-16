@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h1>Finding HTML elements by Tag name</h1>
+        <p>Hello World!</p>
+        <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+        <p id="demo"></p>
+        <script>
+            var myVariable = document.getElementsByTagName("p");
+            document.getElementById("demo").innerHTML = "The text in the first paragraph [0] is "+myVariable[0].innerHTML;
+        </script>
+    </body>
+</html>

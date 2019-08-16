@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <h2>JavaScript Array.map()</h2>
+        <p>Creates a new array by performing a function on each array element.</p>            
+        <p id="demo"></p>
+        <script>
+            var numbers1 = [21,25,45,125,15,326,445,85,25,41,55];
+            //var numbers2 = numbers1.map(myFunction);
+            //var numbers2 = numbers1.filter(myFunction);
+            //var numbers2 = numbers1.reduce(myFunction);
+            //var numbers2 = numbers1.reduce(myFunction,92);
+            var numbers2 = numbers1.reduceRight(myFunction,92);
+            document.getElementById("demo").innerHTML = numbers2;
+            /*function myFunction(value,index,arr){
+                return value;
+            }*/
+            /*function myFunction(value){
+                return value * 2;
+            }*/
+            /*function myFunction(value){
+                return value > 100;
+            }*/
+            /*function myFunction(total,value,index,array){
+                return total + value;
+            }*/
+            function myFunction(total,value){
+                return total + value;
+            }   
+        </script>
+    </body>
+</html>

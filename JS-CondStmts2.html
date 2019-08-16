@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>Javascript Conditional Statements...</h1>
+        <p>Click the button to display a time-based greeting:</p>
+        <button type="button" onclick="myFunction()">Wish!</button>
+        <p id="demo"></p>
+        <script>            
+            function myFunction(){
+                var hours = new Date().getHours();                            
+                var greetings;
+                if(hours < 12){
+                    greetings = "Good morning!";
+                }else if(hours >= 12 && hours < 16){
+                    greetings = "Good afternoon!"
+                }else if(hours >= 16 && hours <=19){
+                    greetings = "Good evening!";
+                }else if(hours > 19 && hours < 24){
+                    greetings = "Good night!";
+                }
+                document.getElementById("demo").innerHTML = greetings;
+            }
+        </script>
+    </body>
+</html>

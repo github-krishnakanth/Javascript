@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h1>Finding HTML element using document.links</h1>
+        <p>
+        <a href="/html/default.asp">HTML</a><br>
+        <a href="/css/default.asp">CSS</a>
+        </p>    
+        <p id="demo"></p>
+
+        <script>
+            document.getElementById("demo").innerHTML = "Number of links are: " + document.links.length;
+        </script>
+    </body>
+</html>

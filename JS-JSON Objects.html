@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JSON Object</h1>
+        <p>How to loop through all properties in a JSON object.</p>
+        <p id="demo"></p>
+        <script>
+            var jsonObj = {"name":"Steven Smith", "age":30, "car":null};
+            for(x in jsonObj){
+                document.getElementById("demo").innerHTML += jsonObj[x] + "<br>";
+            }
+        </script>
+    </body>
+</html>

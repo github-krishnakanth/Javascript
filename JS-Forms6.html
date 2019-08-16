@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <h1>Javascript Form Validations....</h1>
+        Student Score: <input id="input" type="number" min="0" max="600" required>
+        <button type="button" onclick="myFunction()">Validate</button>
+        <p id="demo"></p>
+        <p>If the number exceeds specified max attribute value, an error message will be displayed...</p>
+        <script>
+            function myFunction(){
+                var txt = "";
+                var cond = document.getElementById("input").validity;
+                if (cond.rangeOverflow) {
+                    txt = "Value too large";
+                }else if(cond.rangeUnderflow){
+                    txt = "Value too small";
+                }else if(cond.valueMissing){
+                    txt = "Value Missing";
+                }else if(cond.typeMismatch){
+                    txt = "Input is invalid";
+                }
+                else{
+                    txt = "input is ok";
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+    </body>
+</html>

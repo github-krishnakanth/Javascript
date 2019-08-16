@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>The XMLHttpRequest Object</h2>
+        <h3>Start typing a name in the input field below:</h3>            
+        <p>First Name:  <input type="text" id="input" onkeyup="showHint(this.value)"></p>
+        <p>Suggestions: <span id="inputHint"></span></p>
+        <script>    
+            function showHint(str){
+                var xhttp;
+                if(str.length == 0){
+                    document.getElementById("inputHint").innerHTML = "";
+                    return;
+                }
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        document.getElementById("inputHint").innerHTML = this.responseText;
+                    }
+                }
+                xhttp.open("GET", "gethint.asp?q="+str, true);
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>

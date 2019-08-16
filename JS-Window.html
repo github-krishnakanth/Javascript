@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <h1>JavaScript Window & JavaScript Screen</h1>
+        <p id="demo"></p>
+        <script>
+            /*var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+            var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+            var o = window.open();
+            
+            var c = window.close();
+
+            var m = window.moveTo();
+
+            var r = window.resizeTo();
+            */
+            var x = document.getElementById("demo");
+            //document.getElementById("demo").innerHTML = "Browser inner window width: " + w + " height: " + h;
+            //x.innerHTML = "To open a new window " + o;
+            //x.innerHTML = "To close the current window " + c;
+            //x.innerHTML = "Move the current Window " + m;
+            //x.innerHTML = "Resize the current window " + r;
+            //x.innerHTML = "Screen Width: " + screen.width + ", Height: " + screen.height;
+            //x.innerHTML = "Screen Available Width: " + screen.availWidth + ", Available Height: " + screen.availHeight;
+            //x.innerHTML = "Screen Color depth: " + screen.colorDepth;
+            x.innerHTML = "Screen Pixel depth: " + screen.pixelDepth;
+        </script>
+    </body>
+</html>

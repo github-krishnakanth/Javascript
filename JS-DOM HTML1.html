@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h1>Javascript can change HTML</h1>
+        <button type="button" onclick="myFunction()">Javascript can change HTML</button>
+        <p id="demo">Only Javascript</p>
+        <script>
+            function myFunction(){
+                document.getElementById("demo").innerHTML = "Not only Javascript but also Javascript with HTML Dom...";
+            }
+        </script>
+    </body>
+</html>

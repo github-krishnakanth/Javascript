@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <h1>Javascript Methods...</h1>
+        <p id="demo"></p>
+        <script>
+            var person = {firstName: "Steven", lastName: "Smith", id: 5566};
+            person.name = function(){ return this.firstName + " " + this.lastName; };
+            document.getElementById("demo").innerHTML = person.name();            
+        </script>
+    </body>
+</html>

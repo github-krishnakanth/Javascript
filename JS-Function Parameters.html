@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h1>Javascript Function Parameters...</h1>
+        <p>Finding highest number</p>
+        <p id="demo"></p>
+        <script>
+            function findMax(){
+                var i = 0, max = -Infinity, len = arguments.length;
+                for(i; i < len; i++){
+                    if(arguments[i] > max){
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            }
+            document.getElementById("demo").innerHTML = findMax(5,4,2,6,8,2,3,4,25,12,45,36,41,85,26,95,41,52,36,74,85,95,93,521,41,85,74,96,52,52);
+        </script>
+    </body>
+</html>

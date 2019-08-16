@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <span id="demo"></span>
+        <script>
+            var points = [541,221,521,635,415,25,365,524,851,236,558,473,965,419,525];
+            document.getElementById("demo").innerHTML = myFunction(points);
+            function myFunction(arr){
+                //return Math.max.apply(null, arr);
+                return Math.min.apply(null, arr);
+            }
+        </script>
+    </body>
+</html>

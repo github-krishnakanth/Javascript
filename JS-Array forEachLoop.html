@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h2>JavaScript Arrays</h2>
+        <p>Array.forEach() calls a function for each array element.</p>            
+        <p>Array.forEach() is not supported in Internet Explorer 8 or earlier.</p>            
+        <p id="demo"></p>
+        <script>
+            var courses = ["J2SE", "J2EE", "Spring", "Struts", "JSF", "Hibernate", "Web Services", "Restful Services", "Java Design Patterns", 
+            "Java Realtime Tools"];
+            var txt = "<ul>";
+            courses.forEach(myFunction);
+            txt += "</ul>";    
+            function myFunction(value){
+                 txt += "<li>"+value+"</li>";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        </script>
+    </body>
+</html>

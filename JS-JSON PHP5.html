@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Get data as JSON from a PHP file on the server.</h2>
+        <p id="demo"></p>
+        <script>
+            var jsonObj, dbParam, xhttp, jsonResObj, x, text="";
+            jsonObj = {"table":"customers", "limit":10};
+            dbParam = JSON.stringify(jsonObj);
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200){
+                    jsonResObj = JSON.parse(this.responseText);
+                    for(x in jsonResObj){
+                        text += jsonResObj[x].name + "<br>";
+                    }
+                    document.getElementById("demo").innerHTML = text;    
+                }
+            };
+            xhttp.open("GET", "json_demo_db.php?x="+dbParam, true);
+            xhttp.send();
+        </script>
+        <p>Try changing the "table" property from "customers" to "products".</p>
+    </body>
+</html>

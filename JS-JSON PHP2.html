@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Get data as JSON from a PHP file on the server.</h2>
+        <p>The JSON received from the PHP file:</p>
+        <p id="demo"></p>
+        <script>
+            var jsonObj = {"table":"customers", "limit":10};
+            var dbParam = JSON.stringify(jsonObj);
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "json_demo_db.php?q=" + dbParam, true);
+            xhttp.send();
+        </script>
+    </body>
+</html>

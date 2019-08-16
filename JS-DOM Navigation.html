@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <h1 id="h1">My First Page</h1>
+        <p id="p">Hello!</p>
+        <script>
+            //document.getElementById("p").innerHTML = document.getElementById("h1").innerHTML;
+            //document.getElementById("p").innerHTML = document.getElementById("h1").firstChild.nodeValue;
+            document.getElementById("p").innerHTML = document.getElementById("h1").childNodes[0].nodeValue;
+        </script>
+    </body>
+</html>

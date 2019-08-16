@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h1>Javascript Form Validations...</h1>
+        Student Total: <input id="input" type="number" name="num" min="0" max="600" required>
+        <button type="button" onclick="myFunction()">Validate</button>
+        <p id="demo"></p>
+        <p>if the input number is lessthan 0 and greater than 600, an error message has been displayed..</p>
+        <script>
+            function myFunction(){
+                var inpObj = document.getElementById("input");
+                    if(!inpObj.checkValidity()){
+                        document.getElementById("demo").innerHTML = inpObj.validationMessage;
+                    }else{
+                        document.getElementById("demo").innerHTML = "Input is ok..";
+                    }
+            }
+        </script>    
+    </body>
+</html>

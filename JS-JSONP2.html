@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+            <h2>Click the Button.</h2>
+            <p>A script tag with a src attribute is created and placed in the document.</p>
+            <p>The PHP file returns a call to a function with the JSON object as a parameter.</p>
+            <button type="button" onclick="myFunction()">Show</button>
+            <p id="demo"></p>
+            <p>Try changing the table property from "customers" to "products".</p>            
+            <script>
+                function myFunction(){
+                    var myObj, s;
+                    myObj = {table:"customers", limit:10};
+                    s = document.createElement("script");
+                    s.src = "jsonp_demo_db.php?x="+JSON.stringify(myObj);
+                    document.body.appendChild(s);
+                }
+                function myFunc(myObj){
+                    var x, txt="";
+                    for (x in myObj){
+                        txt += myObj[x].name + "<br>";
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+                }
+            </script>
+    </body>
+</html>

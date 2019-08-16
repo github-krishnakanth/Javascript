@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JSON.stringify will convert any date objects into strings.</h2>
+        <p id="demo"></p>
+        <script>
+            var jsObj = {name:"Steven Smith", age:30, dob:new Date(), country:"Australia"};
+            var jsonText = JSON.stringify(jsObj);
+            document.getElementById("demo").innerHTML = jsonText;
+        </script>
+    </body>
+</html>

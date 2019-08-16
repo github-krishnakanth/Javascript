@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>How to modify vlaues in a json object</h1>
+        <p id="demo"></p>
+        <script>
+            var x="", i;
+            var jsonObj = {"name":"Steven", 
+                           "age":30,
+                           "country":"Australia",
+                           "cars":{"car1":"Fiat",
+                                   "car2":"Ford",
+                                   "car3":"Swift",
+                                   "car4":"BMW"}};
+            jsonObj.cars.car3 = "Mercedes";
+            for(i in jsonObj.cars){
+                x += jsonObj.cars[i] + "<br>";
+            }
+            document.getElementById("demo").innerHTML = x;
+        </script>
+    </body>
+</html>

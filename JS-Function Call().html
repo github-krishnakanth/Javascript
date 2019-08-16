@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1>Javascript Function Call()...</h1>         
+        <p>This example calls the fullName method of person, using it on person1:</p>
+        <p id="demo"></p>
+        <script>
+            /*var person = {fullName: function(){
+                return this.firstName + " " + this.lastName;
+            }};*/
+
+            var person = {fullName: function(city, country){
+               return this.firstName + " " + this.lastName + "," + city + "," + country;
+            }};
+
+            var person1 = {firstName: "Smith", lastName: "Steven"};
+            var person2 = {firstName: "Reema", lastName: "Steven"};
+            //document.getElementById("demo").innerHTML = person.fullName.call(person1);
+            document.getElementById("demo").innerHTML = person.fullName.call(person1, "Oslo", "Norway");
+        </script>
+    </body>
+</html>

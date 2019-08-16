@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Prompt</h1>
+        <button type="button" onclick="myFunction()">Try it!</button>
+        <p id="demo"></p>
+        <script>
+            function myFunction(){
+                var txt;
+                var person = prompt("Please enter your name", "Krishnakanth");
+                if(person == null || person == ""){
+                    txt = "User cancelled the prompt";
+                }else{
+                    txt = "Hello " + person + "! How are you?"
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+    </body>
+</html>

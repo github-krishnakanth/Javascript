@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h1>Finding HTML Elements by id...</h1>
+        <p id="intro">Hello World!</p>
+        <p>This example demonstrates the <b>getElementById</b> method...</p>
+        <p id="demo"></p>
+        <script>
+            var myVariable = document.getElementById("intro");
+            document.getElementById("demo").innerHTML = "The text form the intro paragraph is " + myVariable.innerHTML;
+        </script>
+    </body>
+</html>

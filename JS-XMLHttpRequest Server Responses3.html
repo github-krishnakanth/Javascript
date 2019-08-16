@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>The XMLHttpRequest Object</h1>
+        <button type="button" onclick="loadDoc()">Display Artists</button>
+        <p id="demo"></p>
+        <script>
+            function loadDoc(){
+                var xhttp = new XMLHttpRequest();
+                var xmlDoc, x, i, txt = "";
+                xhttp.onreadystatechange = function() {
+                    if(this.readyState == 4 && this.status == 200){
+                        xmlDoc = this.responseXML;
+                    }
+                    x = xmlDoc.getElementsByTagName("ARTIST");
+                    for(i=0; i<x.length; i++){
+                        txt += x[i].childNodes[0].nodeValue + "<br>";
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+                }
+                xhttp.open("GET", "cd_catalog.xml", true);
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>

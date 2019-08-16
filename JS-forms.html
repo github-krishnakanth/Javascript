@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="POST">
+            Name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    <script>
+        function validateForm(){
+            var fname = document.forms["myForm"]["fname"].value;
+            if(fname == ""){
+                alert("Name must be filled out..");
+                return false;
+            }
+        }
+    </script>
+</html>

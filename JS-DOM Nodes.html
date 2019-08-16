@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="div1">
+            <p id="p1">This is a paragraph</p>
+            <p id="p2">This is another paragraph</p>
+        </div>
+        <script>
+            var elementNode = document.createElement("p");
+            var textNode = document.createTextNode("Rejoice in the Lord always: and again I say, Rejoice.") ;
+            elementNode.appendChild(textNode);
+            var element = document.getElementById("div1");
+            element.appendChild(elementNode);
+        </script>
+    </body>
+</html>

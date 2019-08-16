@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h1>Javascript Function Closures...</h1>
+        <p>Counting with a local variable</p>
+        <p id="demo"></p>
+        <script>
+            document.getElementById("demo").innerHTML = add();
+            function add(){
+                var counter = 0;
+                function plus(){
+                    counter += 1;
+                }
+                plus();
+                return counter;
+            }
+        </script>
+    </body>
+</html>

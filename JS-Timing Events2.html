@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+        <p>Click "Stop" to prevent the first function to execute.</p>
+        <p>(You must click "Stop" before the 4 seconds are up.)</p>
+        <button type="button" onclick="myEvent = setTimeout(myFunction, 4000)">Try it!</button>
+        <button type="button" onclick="clearTimeout(myEvent)">Stop it!</button>
+        <script>
+            function myFunction(){
+                alert("Hello! How are you?");
+            }
+        </script>
+    </body>
+</html>

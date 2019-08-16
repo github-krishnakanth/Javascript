@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h1>Finding HTML elements by tag name</h1>
+        <div id="main">
+            <p>The DOM is very useful.</p>
+            <p>This element demonstartes the <b>getElementByTagName</b> method.</p>
+        </div>
+        <p id="demo"></p>
+        <script>
+            var x = document.getElementById("main");
+            var y = x.getElementsByTagName("p");
+            document.getElementById("demo").innerHTML = "The first paragraph [0] inside main is "+y[0].innerHTML;
+        </script>
+    </body>
+</html>

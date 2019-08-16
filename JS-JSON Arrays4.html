@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Get data as JSON from a PHP file, and convert it into a JavaScript array.</h2>
+        <p id="demo"></p>
+        <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200){
+                    var jsonText = JSON.parse(this.responseText);
+                    document.getElementById("demo").innerHTML = jsonText[1];
+                }
+            };
+            xhttp.open("GET", "demo_file_array.php", true);
+            xhttp.send();
+        </script>
+    </body>
+</html>

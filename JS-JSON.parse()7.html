@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Convert a string into a data object</h1>
+        <p id="demo"></p>
+        <script>
+            var jsonTxt = '{"name":"Steven", "dob":"1986-12-25", "country":"Australia"}';
+            var jsObj = JSON.parse(jsonTxt, function(key, value){
+                if(key == "dob"){
+                    return new Date(value);
+                }else{
+                    return value;
+                }
+            });
+            document.getElementById("demo").innerHTML = jsObj.name + " beleongs to " + jsObj.country + " and his DOB is " + jsObj.dob + " ";
+            document.getElementById("demo").innerHTML = jsObj.name + " beleongs to " + jsObj.country + " and his DOB is " + jsObj.dob + " ";
+        </script>
+    </body>
+</html>

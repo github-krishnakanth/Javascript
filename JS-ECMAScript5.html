@@ -1,0 +1,85 @@
+<html>
+    <body>
+        <h2>JavaScript String.trim()</h2>
+        <p>Click the button to alert the string with removed whitespace.</p>            
+        <h2>JavaScript Array.forEach()</h2>
+        <p>Calls a function once for each array element.</p>
+        <p id="demo"></p>
+        <p id="foreach"></p>
+        <p id="map"></p>
+        <p id="filter"></p>
+        <p id="reduce"></p>
+        <p id="reduceright"></p>
+        <p id="every"></p>
+        <p id="some"></p>
+        <p id="indexof"></p>
+        <p id="lastindexof"></p>
+        <p id="jsonparse"></p>
+        <p id="jsonstringfy"></p>
+        <p id="get"></p>
+        <p id="getlang"></p>
+        <p id="getlangupper"></p>
+        <script>
+            var str = "          Hellor World!          ";
+            alert(str.trim());
+            var fruits = ["Banana", "Papaya", "Pineapple", "Kiwi"];
+            var x = document.getElementById("demo");
+            x.innerHTML = Array.isArray(fruits);
+            var txt = "";
+            var numbers = [12, 52, 44, 26, 85, 96, 19, 78, 64];
+            numbers.forEach(myFunction);
+            document.getElementById("foreach").innerHTML = txt;
+            function myFunction(value){
+                txt = txt + value + "<br>";                    
+            }
+            numbers2 = numbers.map(myFunction2);
+            document.getElementById("map").innerHTML = numbers2;
+            function myFunction2(value, index, array){
+                return value;                    
+            }
+            numbers3 = numbers.filter(myFunction3);
+            document.getElementById("filter").innerHTML = numbers3;
+            function myFunction3(value, index, array){
+                return value > 50;
+            }
+            var numbers4 = numbers.reduce(myFunction4);
+            document.getElementById("reduce").innerHTML = numbers4;
+            function myFunction4(value, total, index, array){
+                return total + value;
+            }
+            var numbers5 = numbers.reduceRight(myFunction5);
+            document.getElementById("reduceright").innerHTML =  numbers5;
+            function myFunction5(total, value, index, array){
+                return total + value;
+            }
+            var numbers6 = numbers.every(myFunction6);
+            document.getElementById("every").innerHTML = numbers6;
+            function myFunction6(value, index, array){
+                return value > 25;
+            }
+            var numbers7 = numbers.some(myFunction7);
+            document.getElementById("some").innerHTML = numbers7;
+            function myFunction7(value, index, array){
+                return value > 25;
+            }
+            var fruits = ["Apple", "Banana", "Kiwi", "Pineapple", "Grapes"];
+            document.getElementById("indexof").innerHTML = fruits.indexOf("Kiwi");
+            document.getElementById("lastindexof").innerHTML = fruits.lastIndexOf("Kiwi");
+            var txt = '{"name":"Steven Smith", "age":"29", "country":"Australia", "profession":"Cricketer"}';
+            var obj = JSON.parse(txt);
+            document.getElementById("jsonparse").innerHTML = obj.name + " is a " + obj.profession;
+            var person = {firstName: "Steven",lastName: "Smith", age: "29", country: "Australia", profession: "Cricketer"};
+            document.getElementById("jsonstringfy").innerHTML = JSON.stringify(person);
+            var person2 = {firstName: "Steven",lastName: "Smith", age: "29", country: "Australia", profession: "Cricketer", get fullName(){
+                return this.firstName + " " + this.lastName;
+            }};
+            document.getElementById("get").innerHTML = person2.fullName;
+            var person3 = {firstName: "Steven", lastName: "Smith", language: "", get lang(){ return this.language;}, set lang(value){ this.language = value; }};
+            person3.lang = "en";
+            document.getElementById("getlang").innerHTML = person3.language; 
+            var person4 = {firstName: "Steven", lastName: "Smith", language: "", get lang(){ return this.language;}, set lang(value){ this.language = value.toUpperCase(); }};
+            person4.lang = "en";
+            document.getElementById("getlangupper").innerHTML = person4.language;
+        </script>
+    </body>
+</html>

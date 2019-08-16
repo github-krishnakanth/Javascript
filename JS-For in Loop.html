@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h1>Javascript for in loop...</h1>
+        <p id="demo"></p>
+        <script>
+            var person = {firstName:"Smith", lastName:"Steven", Gender:"Male", Age:"29", Profession:"Cricketer"};
+            var txt = "";
+
+            for (X in person){
+                txt += person[X] + " ";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>Javascript switch statement...</h1>
+        <p id="demo"></p>
+        <script>
+            var x;
+            switch(new Date().getDay()){
+                case 4:
+                case 5:
+                    x = "soon it is weekend";
+                    break;
+                case 0:
+                case 6: 
+                    x = "it is weekend";
+                    break;
+                default:
+                    x = "Looking forward to the weekend";
+            }
+            document.getElementById("demo").innerHTML = x;
+        </script>
+    </body>
+</html>

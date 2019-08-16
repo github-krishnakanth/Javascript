@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>Javascript Object Properties....</h1>
+        <p>There are two different ways to access an object property:</p>
+        <p>You can use .property or ["property"].</p>
+        <p id="demo"></p>
+        <p id="forinloop"></p>
+        <script>
+            var person = {firstName:"Steven", lastName:"Smith", age:29, profession:"Cricketer", country:"Australia"};
+            var x = person;
+            var y, txt = "";
+            x.profession = "Hockey";
+            person.role = "Captain";
+            //delete person.profession;
+            document.getElementById("demo").innerHTML = "First Name: "+ person.firstName + "<br>Last Name: "+ x.lastName +  "<br>Age: "+ x.age + "<br>Profession: "+ person.profession + "<br>Country: "+ x.country + "<br>Role: "+ person.role;
+            for(y in person){
+                txt += person[y]+" ";
+            }
+            document.getElementById("forinloop").innerHTML = txt;
+        </script>
+    </body>
+</html>

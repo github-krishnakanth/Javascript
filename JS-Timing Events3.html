@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body style="background-color: darkkhaki">
+        <!--<p>A script on this page starts this clock:</p>-->
+        <h1 id="demo" style="color: crimson; text-align: center; font-size: 200px;"></h1>
+        <button type="button" onclick="clearInterval(i)" style="text-align: center; font-size: 75px;">Stop</button>
+        <script>
+            var i = setInterval(myFunction, 1000);
+            function myFunction(){
+                var t = new Date();
+                document.getElementById("demo").innerHTML = t.toLocaleTimeString();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h2>JavaScript String Methods</h2>
+        <p>Replace "small" with "big" in the paragraph below:</p>
+        <button type="button" onclick="myFunction()">Try it!</button>            
+        <p id="demo">We have provided below simple and small paragraphs on various common topics.</p>
+        <script>
+            function myFunction(){
+                var str = document.getElementById("demo").innerHTML;
+                var txt = str.replace("small", "big");
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+    </body>
+</html>

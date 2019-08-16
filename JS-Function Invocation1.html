@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h1>Javascript Functions...</h1>
+        <p>In this example, myFunction is a function constructor...</p>
+        <p id="demo"></p>
+        <script>
+            function myFunction(arg1, arg2){
+                this.firstName = arg1;
+                this.lastName = arg2;
+            }
+            var x = new myFunction("Smith", "Steven");
+            document.getElementById("demo").innerHTML = x.firstName + " " + x.lastName;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function mUp(){
+                document.getElementById("myImage").src = "D:\Images\pic_bulbon.jpg"
+            }
+            function mDown(){
+                document.getElementById("myImage").src = "D:\Images\pic_bulboff.jpg";
+            }
+        </script>
+        <img src="D:\Images\pic_bulboff.jpg" onmouseup="mUp()" onmousedown="mDown()" id="myImage" width="100" height="180">
+        <p>Click mouse and hold down!</p>
+    </body>
+</html>

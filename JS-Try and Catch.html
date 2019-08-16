@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <h1>Javascript Error Handling..</h1>
+        <p>Please Input a number between 5 and 10</p>
+        <input id="demo" type="text">
+        <button type="button" onclick="myFunction()">Test Input!</button>
+        <p id="errinfo"></p>
+        <script>
+            function myFunction(){
+                var message, x;
+                message = document.getElementById("errinfo");
+                message.innerHTML = "";
+                x = document.getElementById("demo").value;
+                try{
+                    if(x == "") throw "empty";
+                    if(isNaN(x)) throw "not a number";
+                    Number(x);
+                    if(x<5) throw "too low";
+                    if(x>10) throw "too high";
+                }catch(error){
+                    message.innerHTML = "Input is "+error;
+                }
+            }
+        </script>
+    </body>
+</html>

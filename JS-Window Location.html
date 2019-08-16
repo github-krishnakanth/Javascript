@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h1>The window.location object</h1>
+        <p id="demo"></p>
+        <input type="button" value="Load new document" onclick="myFunction()">
+        <script>
+            var x = document.getElementById("demo");
+            //x.innerHTML = "The full URL of this page is: " + window.location.href;
+            //x.innerHTML = "Page hostname is: " + window.location.hostname;
+            //x.innerHTML = "Page path is: " + window.location.pathname;
+            //x.innerHTML = "Page protocol is: " + window.location.protocol;
+            //x.innerHTML = "Port number is: " + window.location.port;
+            function myFunction(){
+                //window.location.assign("https://www.w3schools.com");
+                //window.history.back();
+                window.history.forward();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Convert a string into a date object</h1>
+        <p id="demo"></p>
+        <script>
+            var jsonText = '{"name":"Steven Smith", "dob":"1986-12-25", "country":"Australia"}';
+            var myObj = JSON.parse(jsonText);
+            myObj.dob = new Date(myObj.dob);
+            document.getElementById("demo").innerHTML = myObj.name + " " + myObj.dob;
+        </script>
+    </body>
+</html>

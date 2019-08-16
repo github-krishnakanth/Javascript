@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Convert a string into a function</h1>
+        <p id="demo"></p>
+        <script>
+            var jsonText = '{"name":"Steven Smith", "age":"function(){return 30;}", "country":"Australia"}';
+            var jsObj = JSON.parse(jsonText);
+            jsObj.age = eval("(" + jsObj.age + ")");
+            document.getElementById("demo").innerHTML = jsObj.age();
+        </script>
+    </body>
+</html>

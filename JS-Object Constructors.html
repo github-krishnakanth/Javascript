@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h1>Javascript Object Constructors...</h1>
+        <p id="demo"></p>
+        <script>
+            //Constructor function for Person object
+            function Person(first, last, age, country){
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.country = country;
+            }
+            //Create a Person object
+            var myProfile = new Person("Smith", "Steven", 30, "Australia");
+            //Display country
+            document.getElementById("demo").innerHTML = myProfile.country;
+        </script>
+    </body>
+</html>

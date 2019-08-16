@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <p>Convert string to uppercase and lowercase:</p>
+        <button type="button" onclick="myUpperFunction()">Upper Case</button>
+        <p id="upper">Hello! World...</p>
+        <button type="button" onclick="myLowerFunction()">Lower Case</button> 
+        <p id="lower">HELLO! WORLD...</p>
+        <script>
+            function myUpperFunction(){                
+                var str = document.getElementById("upper").innerHTML;
+                var txt = str.toUpperCase();
+                document.getElementById("upper").innerHTML = txt;
+            }
+            function myLowerFunction(){
+                var str = document.getElementById("lower").innerHTML;
+                var txt = str.toLowerCase();
+                document.getElementById("lower").innerHTML = txt;
+            }
+        </script>
+    </body>
+</html>

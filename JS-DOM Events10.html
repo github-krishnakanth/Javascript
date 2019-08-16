@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction(x){
+                x.style.background = "yellow";
+            }
+            function myFunction2(){
+                var u = document.getElementById("fname");
+                u.value = u.value.toUpperCase();
+            }
+            function myFunction3(){
+                var text = "";
+                if(navigator.cookieEnabled == false){
+                    text = "Cookies are not enabled";
+                }else{
+                    text = "Cookies are enabled";
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+    </head>
+    <body onload="myFunction3()">
+        <p id="demo"></p>
+        Enter Your Name: <input type="text" onfocus="myFunction(this)" onchange="myFunction2()" id="fname" onmouseover="style.color = 'red'" onmouseout="style.color = 'black'">
+        <p>Whent the input field gets focus, a function is triggered which changes the background color.</p>
+        <button id="myBtn">Show Date</button>
+        <p id="showdate"></p>
+        <script>
+            document.getElementById("myBtn").onclick = displayDate;
+            function displayDate(){
+                document.getElementById("showdate").innerHTML = Date();
+            }
+        </script>
+    </body>
+</html>

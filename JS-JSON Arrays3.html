@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>How to modify an array value of a JSON object</h2>
+        <p id="demo"></p>
+        <script>
+            var i, x="";
+            var jsonObj = {"name":"Steven", "age":30, "cars":["Fiat", "Ford", "Swift", "BMW"]};
+            jsonObj.cars[2] = "Mercedes";
+            delete jsonObj.cars[1];
+            for(i in jsonObj.cars){
+                x += jsonObj.cars[i] + "<br>";
+            }
+            document.getElementById("demo").innerHTML = x;
+        </script>
+    </body>
+</html>

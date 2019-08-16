@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h1>Javascript Function Closures...</h1>
+        <p>A function can access variables defined inside the function:</p>
+        <button type="button" onclick="myFunction()">Click Me!</button>
+        <p id="demo"></p>
+        <script>
+            var a = 5;
+            function myFunction(){
+                //var a = 5;
+                document.getElementById("demo").innerHTML = a * a;
+            }
+        </script>
+    </body>
+</html>
